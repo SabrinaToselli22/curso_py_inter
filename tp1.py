@@ -74,12 +74,19 @@ abrir_o_crear_archivo("prueba.txt")
 
 def dividir_numeros(num1,num2): 
      try:
+          num1 = float(num1)
+          num2= float(num2)
+
           resultado = num1 / num2
           print("El resultado de la division es:",resultado)
+          
      except ZeroDivisionError:
          print("Error:No se puede dividir por cero.")
+     except ValueError:
+        print("Error: Debe ingresar un numero valido.")
 
 dividir_numeros(10,2)
 dividir_numeros(20,5)
 dividir_numeros(10,0)
+dividir_numeros("hola",2)
     
